@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "7876d6a6-efff-452b-b207-2934e5306674",
+		"name": "Pokedex Php",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1720043"
+	},
+	"item": [
+		{
+			"name": "GET Listado de tipos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://80db-2806-1016-8-91c0-3164-27a0-5394-537d.ngrok-free.app/pokedex/tipo/get.php",
+					"protocol": "https",
+					"host": [
+						"80db-2806-1016-8-91c0-3164-27a0-5394-537d",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"pokedex",
+						"tipo",
+						"get.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Guardar Tipo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_tipo\": \"Veneno\",\r\n    \"color_fondo\": \"#b97fc9\",\r\n    \"color_letra\": \"#ffffff\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/pokedex/tipo/post.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"pokedex",
+						"tipo",
+						"post.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Borrar un tipo por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:81/pokedex/tipo/delete.php?tipo_id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"pokedex",
+						"tipo",
+						"delete.php"
+					],
+					"query": [
+						{
+							"key": "tipo_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Obtener un tipo por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:81/pokedex/tipo/get_by_id.php?tipo_id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"pokedex",
+						"tipo",
+						"get_by_id.php"
+					],
+					"query": [
+						{
+							"key": "tipo_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar un tipo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo_id\": 1,\r\n    \"nombre_tipo\": \"Planta\",\r\n    \"color_fondo\": \"#9bcc50\",\r\n    \"color_letra\": \"#000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/pokedex/tipo/put.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"pokedex",
+						"tipo",
+						"put.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Guardar un pokemon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Bulbasaur\",\r\n    \"numero\": \"#0001\",\r\n    \"imagen\": \"bulbasaur.png\",\r\n    \"tipos\": [\r\n        {\r\n            \"tipo_id\": \"1\",\r\n            \"nombre_tipo\": \"Planta\",\r\n            \"color_fondo\": \"#9bcc50\",\r\n            \"color_letra\": \"#000000\"\r\n        },\r\n        {\r\n            \"tipo_id\": \"2\",\r\n            \"nombre_tipo\": \"Veneno\",\r\n            \"color_fondo\": \"#b97fc9\",\r\n            \"color_letra\": \"#ffffff\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/pokedex/pokemon/post.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"pokedex",
+						"pokemon",
+						"post.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Listado de pokemones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:81/pokedex/pokemon/get.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"pokedex",
+						"pokemon",
+						"get.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Obtener un pokemon por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:81/pokedex/pokemon/get_by_id.php?pokemon_id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"pokedex",
+						"pokemon",
+						"get_by_id.php"
+					],
+					"query": [
+						{
+							"key": "pokemon_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Borrar un pokemon por identificador",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:81/pokedex/pokemon/delete.php?pokemon_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"pokedex",
+						"pokemon",
+						"delete.php"
+					],
+					"query": [
+						{
+							"key": "pokemon_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar un Pokemon",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pokemon_id\": 2,\r\n    \"nombre\": \"Bulbasaur1\",\r\n    \"numero\": \"#0001\",\r\n    \"imagen\": \"bulbasaur.png\",\r\n    \"tipos\": [\r\n        {\r\n            \"tipo_id\": \"1\",\r\n            \"nombre_tipo\": \"Planta\",\r\n            \"color_fondo\": \"#9bcc50\",\r\n            \"color_letra\": \"#000000\"\r\n        },\r\n        {\r\n            \"tipo_id\": \"2\",\r\n            \"nombre_tipo\": \"Veneno\",\r\n            \"color_fondo\": \"#b97fc9\",\r\n            \"color_letra\": \"#ffffff\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/pokedex/pokemon/put.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"pokedex",
+						"pokemon",
+						"put.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
